@@ -1,0 +1,20 @@
+{
+  "name": "civweave-guild-ckoud",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "wrangler deploy --dry-run --outdir .wrangler-dry-run",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "CIVWEAVE_GUILD_CLAIM_TOKEN": {
+        "description": "Paste the one-time pairing code shown by Civweave after you create the Guild locally on your phone. It binds this Cloudflare Guild to that exact local Guild; do not invent a different value."
+      }
+    }
+  }
+}
